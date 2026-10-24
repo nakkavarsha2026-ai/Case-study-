@@ -13,7 +13,7 @@ int main()
     switch (choice)
     {
     case 1:
-        printf("\n current balance:%.2f",balance);
+        printf("\n current balance:%.2f"\n,balance);
         break;
     case 2:
         printf("\n enter withdraw amount:");
@@ -21,26 +21,27 @@ int main()
         if(amount<=balance&&amount>0)
         {
             balance-=amount;
-            printf("\n transaction successful");
+            printf("\n transaction successful\n");
             printf("\n remaining balance:%.2f",balance);
         } else
         {
-            printf("\n insufficient balance");
+            printf("\n insufficient balance\n");
             break;
         case 3:
-            printf("enter deposit amount:");
+            printf("\nenter deposit amount:");
             scanf("%f",amount);
             if(amount>0) {
                 balance +=amount;
-                printf("deposit successful\n");
+                printf("\ndeposit successful\n");
                 printf("update balance:%2f\n",balance);
             } else {
                 printf("invalid deposit amount\n");
             }
             break;
+
         default:
-            printf("invalid iption\n");
-        }
+            printf("\ninvalid iption\n");
+        
     }
     return 0;
 }    
